@@ -118,11 +118,11 @@ describe('resolver visible entities', () => {
       store.dispatch(action);
       store.dispatch(cameraAction);
     });
-    it('the visibleProcessNodePositions list should only include 2 nodes', () => {
+    it('the visibleProcessNodePositions list should only include 2 nodes c28329', () => {
       const { processNodePositions } = visibleNodesAndEdgeLines(store.getState())(0);
       expect([...processNodePositions.keys()].length).toEqual(2);
     });
-    it('the visibleEdgeLineSegments list should only include one edge line', () => {
+    it('the visibleEdgeLineSegments list should only include one edge line c28330', () => {
       const { connectingEdgeLineSegments } = visibleNodesAndEdgeLines(store.getState())(0);
       expect(connectingEdgeLineSegments.length).toEqual(1);
     });
@@ -146,11 +146,11 @@ describe('resolver visible entities', () => {
       store.dispatch(action);
       store.dispatch(cameraAction);
     });
-    it('the visibleProcessNodePositions list should include all process nodes', () => {
+    it('the visibleProcessNodePositions list should include all process nodes c28331', () => {
       const { processNodePositions } = visibleNodesAndEdgeLines(store.getState())(0);
       expect([...processNodePositions.keys()].length).toEqual(5);
     });
-    it('the visibleEdgeLineSegments list include all lines', () => {
+    it('the visibleEdgeLineSegments list include all lines c28332', () => {
       const { connectingEdgeLineSegments } = visibleNodesAndEdgeLines(store.getState())(0);
       expect(connectingEdgeLineSegments.length).toEqual(4);
     });

@@ -50,7 +50,7 @@ describe('process event', () => {
         mock(NaN, 'h'),
       ];
     });
-    it('sorts events as expected', () => {
+    it('sorts events as expected c28230', () => {
       events.sort(orderByTime);
       expect(events).toMatchInlineSnapshot(`
         Array [

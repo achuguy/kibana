@@ -30,7 +30,7 @@ describe('panning interaction', () => {
       const action: CameraAction = { type: 'userSetRasterSize', payload: [300, 200] };
       store.dispatch(action);
     });
-    it('should have a translation of 0,0', () => {
+    it('should have a translation of 0,0 c28253', () => {
       translationShouldBeCloseTo([0, 0]);
     });
     describe('when the user has started panning at (100, 100)', () => {
@@ -41,7 +41,7 @@ describe('panning interaction', () => {
         };
         store.dispatch(action);
       });
-      it('should have a translation of 0,0', () => {
+      it('should have a translation of 0,0 c28254', () => {
         translationShouldBeCloseTo([0, 0]);
       });
       describe('when the user moves their pointer 50px up and right (towards the top right of the screen)', () => {
@@ -78,7 +78,7 @@ describe('panning interaction', () => {
       };
       store.dispatch(action);
     });
-    it('the camera eventually moves up so that objects appear closer to the bottom of the screen', () => {
+    it('the camera eventually moves up so that objects appear closer to the bottom of the screen c28257', () => {
       const aBitIntoTheFuture = time + 100;
 
       /**

@@ -111,7 +111,7 @@ describe('resolver graph layout', () => {
     events = [];
   });
   describe('when rendering no nodes', () => {
-    it('renders right', () => {
+    it('renders right c28219', () => {
       expect(layout()).toMatchSnapshot();
     });
   });
@@ -119,7 +119,7 @@ describe('resolver graph layout', () => {
     beforeEach(() => {
       events = [processA];
     });
-    it('renders right', () => {
+    it('renders right c28220', () => {
       expect(layout()).toMatchSnapshot();
     });
   });
@@ -127,7 +127,7 @@ describe('resolver graph layout', () => {
     beforeEach(() => {
       events = [processA, processB];
     });
-    it('renders right', () => {
+    it('renders right c28221', () => {
       expect(layout()).toMatchSnapshot();
     });
   });
@@ -145,26 +145,26 @@ describe('resolver graph layout', () => {
         processI,
       ];
     });
-    it('renders right', () => {
+    it('renders right c28222', () => {
       expect(layout()).toMatchSnapshot();
     });
-    it('should have node a at level 1', () => {
+    it('should have node a at level 1 c28223', () => {
       expect(layout().ariaLevels.get(processA)).toBe(1);
     });
-    it('should have nodes b and c at level 2', () => {
+    it('should have nodes b and c at level 2 c28224', () => {
       expect(layout().ariaLevels.get(processB)).toBe(2);
       expect(layout().ariaLevels.get(processC)).toBe(2);
     });
-    it('should have nodes d, e, f, and g at level 3', () => {
+    it('should have nodes d, e, f, and g at level 3 c28225', () => {
       expect(layout().ariaLevels.get(processD)).toBe(3);
       expect(layout().ariaLevels.get(processE)).toBe(3);
       expect(layout().ariaLevels.get(processF)).toBe(3);
       expect(layout().ariaLevels.get(processG)).toBe(3);
     });
-    it('should have node h at level 4', () => {
+    it('should have node h at level 4 c28226', () => {
       expect(layout().ariaLevels.get(processH)).toBe(4);
     });
-    it('should have 9 items in the map of aria levels', () => {
+    it('should have 9 items in the map of aria levels c28227', () => {
       expect(layout().ariaLevels.size).toBe(9);
     });
   });

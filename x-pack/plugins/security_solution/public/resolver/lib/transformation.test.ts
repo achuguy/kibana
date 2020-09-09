@@ -8,7 +8,7 @@ import { applyMatrix3 } from '../models/vector2';
 import { scalingTransformation } from './transformation';
 
 describe('transforms', () => {
-  it('applying a scale matrix to a vector2 can invert the y value', () => {
+  it('applying a scale matrix to a vector2 can invert the y value c28213', () => {
     expect(applyMatrix3([1, 2], scalingTransformation([1, -1]))).toEqual([1, -2]);
   });
 });

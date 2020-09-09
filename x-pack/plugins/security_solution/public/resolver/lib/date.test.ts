@@ -20,19 +20,19 @@ describe('date', () => {
     const isoTime = new Date('6/1/2020').toISOString();
     const notATime = 'imLate';
 
-    it('should return the time if already a unix timestamp', () => {
+    it('should return the time if already a unix timestamp c28206', () => {
       expect(getUnixTime(unixTime)).toEqual(unixTime);
     });
 
-    it('should properly convert a unix timestamp string to a number', () => {
+    it('should properly convert a unix timestamp string to a number c28207', () => {
       expect(getUnixTime(unixStringTime)).toEqual(unixTime);
     });
 
-    it('should properly convert an ISO string to a unix timestamp', () => {
+    it('should properly convert an ISO string to a unix timestamp c28208', () => {
       expect(getUnixTime(isoTime)).toEqual(unixTime);
     });
 
-    it('should return NaN if an invalid time is provided', () => {
+    it('should return NaN if an invalid time is provided c28209', () => {
       expect(getUnixTime(notATime)).toBeNaN();
     });
   });
@@ -57,11 +57,11 @@ describe('date', () => {
     const almostAYear = new Date(initialTime + 11.9 * month).getTime();
     const threeYears = new Date(initialTime + 3 * year).getTime();
 
-    it('should return null if invalid times are given', () => {
+    it('should return null if invalid times are given c28210', () => {
       expect(getFriendlyElapsedTime(initialTime, 'ImTimeless')).toEqual(null);
     });
 
-    it('should return the correct singular relative time', () => {
+    it('should return the correct singular relative time c28211', () => {
       expect(getFriendlyElapsedTime(initialTime, initialTime)).toEqual({
         duration: '<1',
         durationType: 'millisecond',
@@ -100,7 +100,7 @@ describe('date', () => {
       });
     });
 
-    it('should return the correct pluralized relative time', () => {
+    it('should return the correct pluralized relative time c28212', () => {
       expect(getFriendlyElapsedTime(initialTime, almostASecond)).toEqual({
         duration: 999,
         durationType: 'milliseconds',

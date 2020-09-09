@@ -51,7 +51,7 @@ describe('when the camera is created', () => {
     store = createStore(testReducer);
   });
 
-  it('should be at 0,0', () => {
+  it('should be at 0,0 c28231', () => {
     expect(selectors.translation(store.getState())(0)).toEqual([0, 0]);
   });
   it('should have scale of [1,1]', () => {
@@ -90,11 +90,11 @@ describe('when the camera is created', () => {
         }
       });
 
-      it('should not translate', () => {
+      it('should not translate c28233', () => {
         expect(translationAtIntervals.every(([x, y]: Vector2) => x === 0 && y === 0)).toBe(true);
       });
 
-      it('should not scale', () => {
+      it('should not scale c28234', () => {
         expect(scaleAtIntervals.every(([x, y]: Vector2) => x === 1 && y === 1)).toBe(true);
       });
     });
@@ -133,7 +133,7 @@ describe('when the camera is created', () => {
           );
         }
       });
-      it('should gradually translate to the target', () => {
+      it('should gradually translate to the target c28235', () => {
         expect(translationAtIntervals).toMatchInlineSnapshot(`
           Array [
             Array [
@@ -183,7 +183,7 @@ describe('when the camera is created', () => {
           ]
         `);
       });
-      it('should gradually zoom in and out to the target', () => {
+      it('should gradually zoom in and out to the target c28236', () => {
         expect(scaleAtIntervals).toMatchInlineSnapshot(`
           Array [
             Array [

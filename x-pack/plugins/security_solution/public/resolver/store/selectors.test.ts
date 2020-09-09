@@ -55,13 +55,13 @@ describe('resolver selectors', () => {
             payload: [size, size],
           });
         });
-        it('should return no flowto for the second ancestor', () => {
+        it('should return no flowto for the second ancestor c28333', () => {
           expect(selectors.ariaFlowtoNodeID(state())(0)(secondAncestorID)).toBe(null);
         });
-        it('should return no flowto for the first ancestor', () => {
+        it('should return no flowto for the first ancestor c28334', () => {
           expect(selectors.ariaFlowtoNodeID(state())(0)(firstAncestorID)).toBe(null);
         });
-        it('should return no flowto for the origin', () => {
+        it('should return no flowto for the origin c28335', () => {
           expect(selectors.ariaFlowtoNodeID(state())(0)(originID)).toBe(null);
         });
       });
@@ -89,13 +89,13 @@ describe('resolver selectors', () => {
             payload: [rasterSize, rasterSize],
           });
         });
-        it('should return no flowto for the origin', () => {
+        it('should return no flowto for the origin c28336', () => {
           expect(selectors.ariaFlowtoNodeID(state())(0)(originID)).toBe(null);
         });
-        it('should return the second child as the flowto for the first child', () => {
+        it('should return the second child as the flowto for the first child c28337', () => {
           expect(selectors.ariaFlowtoNodeID(state())(0)(firstChildID)).toBe(secondChildID);
         });
-        it('should return no flowto for second child', () => {
+        it('should return no flowto for second child c28338', () => {
           expect(selectors.ariaFlowtoNodeID(state())(0)(secondChildID)).toBe(null);
         });
       });
@@ -127,25 +127,25 @@ describe('resolver selectors', () => {
             payload: [rasterSize / -2 + leftSideOfSecondChildAABB, 0],
           });
         });
-        it('the origin should be in view', () => {
+        it('the origin should be in view c28339', () => {
           const origin = selectors.processEventForID(state())(originID)!;
           expect(
             selectors.visibleNodesAndEdgeLines(state())(0).processNodePositions.has(origin)
           ).toBe(true);
         });
-        it('the first child should be in view', () => {
+        it('the first child should be in view c28340', () => {
           const firstChild = selectors.processEventForID(state())(firstChildID)!;
           expect(
             selectors.visibleNodesAndEdgeLines(state())(0).processNodePositions.has(firstChild)
           ).toBe(true);
         });
-        it('the second child should not be in view', () => {
+        it('the second child should not be in view c28341', () => {
           const secondChild = selectors.processEventForID(state())(secondChildID)!;
           expect(
             selectors.visibleNodesAndEdgeLines(state())(0).processNodePositions.has(secondChild)
           ).toBe(false);
         });
-        it('should return nothing as the flowto for the first child', () => {
+        it('should return nothing as the flowto for the first child c28342', () => {
           expect(selectors.ariaFlowtoNodeID(state())(0)(firstChildID)).toBe(null);
         });
       });

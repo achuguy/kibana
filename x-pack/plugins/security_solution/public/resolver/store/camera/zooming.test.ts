@@ -65,7 +65,7 @@ describe('zooming', () => {
         };
         store.dispatch(action);
       });
-      it('should zoom to maximum scale factor', () => {
+      it('should zoom to maximum scale factor c28275', () => {
         const actual = viewableBoundingBox(store.getState())(time);
         expect(actual).toMatchInlineSnapshot(`
           Object {
@@ -81,7 +81,7 @@ describe('zooming', () => {
         `);
       });
     });
-    it('the raster position 200, 50 should map to the world position 50, 50', () => {
+    it('the raster position 200, 50 should map to the world position 50, 50 c28276', () => {
       expectVectorsToBeClose(
         applyMatrix3([200, 50], inverseProjectionMatrix(store.getState())(time)),
         [50, 50]
@@ -95,7 +95,7 @@ describe('zooming', () => {
         };
         store.dispatch(action);
       });
-      it('should have focused the world position 50, 50', () => {
+      it('should have focused the world position 50, 50 c28277', () => {
         const coords = store.getState().latestFocusedWorldCoordinates;
         if (coords !== null) {
           expectVectorsToBeClose(coords, [50, 50]);
@@ -111,7 +111,7 @@ describe('zooming', () => {
           };
           store.dispatch(action);
         });
-        it('the raster position 200, 50 should map to the world position 50, 50', () => {
+        it('the raster position 200, 50 should map to the world position 50, 50 c28278', () => {
           expectVectorsToBeClose(
             applyMatrix3([200, 50], inverseProjectionMatrix(store.getState())(time)),
             [50, 50]
@@ -130,7 +130,7 @@ describe('zooming', () => {
           maximum: [250, 100],
         })
       );
-      it('should be centered on 100, 0', () => {
+      it('should be centered on 100, 0 c28279', () => {
         const worldCenterPoint = applyMatrix3(
           [150, 100],
           inverseProjectionMatrix(store.getState())(time)
@@ -143,7 +143,7 @@ describe('zooming', () => {
           const action: CameraAction = { type: 'userSetZoomLevel', payload: scaleToZoom(2) };
           store.dispatch(action);
         });
-        it('should be centered on 100, 0', () => {
+        it('should be centered on 100, 0 c28280', () => {
           const worldCenterPoint = applyMatrix3(
             [150, 100],
             inverseProjectionMatrix(store.getState())(time)
@@ -162,7 +162,7 @@ describe('zooming', () => {
         const action: CameraAction = { type: 'userClickedZoomIn' };
         store.dispatch(action);
       });
-      it('the scaling factor should increase by 0.1 units', () => {
+      it('the scaling factor should increase by 0.1 units c28281', () => {
         const actual = scalingFactor(store.getState());
         expect(actual).toEqual(previousScalingFactor + 0.1);
       });
@@ -173,7 +173,7 @@ describe('zooming', () => {
         const action: CameraAction = { type: 'userClickedZoomOut' };
         store.dispatch(action);
       });
-      it('the scaling factor should decrease by 0.1 units', () => {
+      it('the scaling factor should decrease by 0.1 units c28282', () => {
         const actual = scalingFactor(store.getState());
         expect(actual).toEqual(previousScalingFactor - 0.1);
       });

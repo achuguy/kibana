@@ -54,7 +54,7 @@ describe('useCamera on an unpainted element', () => {
   afterEach(() => {
     jest.clearAllMocks();
   });
-  it('should be usable in React', async () => {
+  it('should be usable in React c28343', async () => {
     expect(element).toBeInTheDocument();
   });
   test('returns a projectionMatrix that changes everything to 0', () => {
@@ -137,7 +137,7 @@ describe('useCamera on an unpainted element', () => {
           deltaMode: 0,
         });
       });
-      it('should zoom in', () => {
+      it('should zoom in c28345', () => {
         expect(projectionMatrix).toMatchInlineSnapshot(`
           Array [
             1.0292841801261479,
@@ -154,7 +154,7 @@ describe('useCamera on an unpainted element', () => {
       });
     });
 
-    it('should not initially request an animation frame', () => {
+    it('should not initially request an animation frame c28346', () => {
       expect(simulator.mock.requestAnimationFrame).not.toHaveBeenCalled();
     });
     describe('when the camera begins animation', () => {
@@ -208,7 +208,7 @@ describe('useCamera on an unpainted element', () => {
         });
       });
 
-      it('should request animation frames in a loop', () => {
+      it('should request animation frames in a loop c28347', () => {
         const animationDuration = 1000;
         // When the animation begins, the camera should request an animation frame.
         expect(simulator.mock.requestAnimationFrame).toHaveBeenCalledTimes(1);
