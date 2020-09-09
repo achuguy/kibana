@@ -50,7 +50,7 @@ describe('data state', () => {
       .join('\n');
   };
 
-  it(`shouldn't initially be loading, or have an error, or have more children or ancestors, or have a document to fetch, or have a pending request that needs to be aborted.`, () => {
+  it(`shouldn't initially be loading, or have an error, or have more children or ancestors, or have a document to fetch, or have a pending request that needs to be aborted. c28293`, () => {
     expect(viewAsAString(state())).toMatchInlineSnapshot(`
       "is loading: false
       has an error: false

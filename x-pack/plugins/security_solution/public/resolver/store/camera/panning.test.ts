@@ -52,7 +52,7 @@ describe('panning interaction', () => {
           };
           store.dispatch(action);
         });
-        it('should have a translation of [-50, -50] as the camera is now focused on things lower and to the left.', () => {
+        it('should have a translation of [-50, -50] as the camera is now focused on things lower and to the left. c28255', () => {
           translationShouldBeCloseTo([-50, -50]);
         });
         describe('when the user then stops panning', () => {
@@ -63,7 +63,7 @@ describe('panning interaction', () => {
             };
             store.dispatch(action);
           });
-          it('should still have a translation of [-50, -50]', () => {
+          it('should still have a translation of [-50, -50] c28256', () => {
             translationShouldBeCloseTo([-50, -50]);
           });
         });

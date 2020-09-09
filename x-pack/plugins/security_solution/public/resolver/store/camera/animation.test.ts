@@ -54,7 +54,7 @@ describe('when the camera is created', () => {
   it('should be at 0,0 c28231', () => {
     expect(selectors.translation(store.getState())(0)).toEqual([0, 0]);
   });
-  it('should have scale of [1,1]', () => {
+  it('should have scale of [1,1] c28232', () => {
     expect(selectors.scale(store.getState())(0)).toEqual([1, 1]);
   });
 

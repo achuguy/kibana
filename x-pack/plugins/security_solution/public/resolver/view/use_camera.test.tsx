@@ -123,7 +123,7 @@ describe('useCamera on an unpainted element', () => {
             clientY: centerY,
           });
         });
-        it('should project [0, 0] in world corrdinates 50 pixels to the right of the center of the element', () => {
+        it('should project [0, 0] in world corrdinates 50 pixels to the right of the center of the element c28344', () => {
           expect(applyMatrix3([0, 0], projectionMatrix)).toEqual([450, 300]);
         });
       });

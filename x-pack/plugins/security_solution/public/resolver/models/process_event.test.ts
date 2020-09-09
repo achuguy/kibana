@@ -19,7 +19,7 @@ describe('process event', () => {
         },
       });
     });
-    it("returns the right value when the subType is 'creation_event'", () => {
+    it("returns the right value when the subType is 'creation_event' c28229", () => {
       event.endgame.event_subtype_full = 'creation_event';
       expect(eventType(event)).toEqual('processCreated');
     });

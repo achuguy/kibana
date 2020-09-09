@@ -29,7 +29,7 @@ describe('projectionMatrix', () => {
     };
   });
   describe('when the raster size is 0 x 0 pixels (unpainted)', () => {
-    it('should convert 0,0 (center) in world space to 0,0 in raster space', () => {
+    it('should convert 0,0 (center) in world space to 0,0 in raster space c28258', () => {
       compare([0, 0], [0, 0]);
     });
   });
@@ -38,31 +38,31 @@ describe('projectionMatrix', () => {
       const action: CameraAction = { type: 'userSetRasterSize', payload: [300, 200] };
       store.dispatch(action);
     });
-    it('should convert 0,0 (center) in world space to 150,100 in raster space', () => {
+    it('should convert 0,0 (center) in world space to 150,100 in raster space c28259', () => {
       compare([0, 0], [150, 100]);
     });
-    it('should convert 0,100 (top) in world space to 150,0 in raster space', () => {
+    it('should convert 0,100 (top) in world space to 150,0 in raster space c28260', () => {
       compare([0, 100], [150, 0]);
     });
-    it('should convert 150,100 (top right) in world space to 300,0 in raster space', () => {
+    it('should convert 150,100 (top right) in world space to 300,0 in raster space c28261', () => {
       compare([150, 100], [300, 0]);
     });
-    it('should convert 150,0 (right) in world space to 300,100 in raster space', () => {
+    it('should convert 150,0 (right) in world space to 300,100 in raster space c28262', () => {
       compare([150, 0], [300, 100]);
     });
-    it('should convert 150,-100 (right bottom) in world space to 300,200 in raster space', () => {
+    it('should convert 150,-100 (right bottom) in world space to 300,200 in raster space c28263', () => {
       compare([150, -100], [300, 200]);
     });
-    it('should convert 0,-100 (bottom) in world space to 150,200 in raster space', () => {
+    it('should convert 0,-100 (bottom) in world space to 150,200 in raster space c28264', () => {
       compare([0, -100], [150, 200]);
     });
-    it('should convert -150,-100 (bottom left) in world space to 0,200 in raster space', () => {
+    it('should convert -150,-100 (bottom left) in world space to 0,200 in raster space c28265', () => {
       compare([-150, -100], [0, 200]);
     });
-    it('should convert -150,0 (left) in world space to 0,100 in raster space', () => {
+    it('should convert -150,0 (left) in world space to 0,100 in raster space c28266', () => {
       compare([-150, 0], [0, 100]);
     });
-    it('should convert -150,100 (top left) in world space to 0,0 in raster space', () => {
+    it('should convert -150,100 (top left) in world space to 0,0 in raster space c28267', () => {
       compare([-150, 100], [0, 0]);
     });
     describe('when the user has zoomed to 0.5', () => {
@@ -70,7 +70,7 @@ describe('projectionMatrix', () => {
         const action: CameraAction = { type: 'userSetZoomLevel', payload: scaleToZoom(0.5) };
         store.dispatch(action);
       });
-      it('should convert 0, 0 (center) in world space to 150, 100 (center)', () => {
+      it('should convert 0, 0 (center) in world space to 150, 100 (center) c28268', () => {
         compare([0, 0], [150, 100]);
       });
     });
@@ -79,13 +79,13 @@ describe('projectionMatrix', () => {
         const action: CameraAction = { type: 'userSetPositionOfCamera', payload: [50, 50] };
         store.dispatch(action);
       });
-      it('should convert 0,0 (center) in world space to 100,150 in raster space', () => {
+      it('should convert 0,0 (center) in world space to 100,150 in raster space c28269', () => {
         compare([0, 0], [100, 150]);
       });
-      it('should convert 50,50 (right and up a bit) in world space to 150,100 (center) in raster space', () => {
+      it('should convert 50,50 (right and up a bit) in world space to 150,100 (center) in raster space c28270', () => {
         compare([50, 50], [150, 100]);
       });
-      it('should convert 60,-60 (right and down a bit) in world space to 160,210 (center) in raster space', () => {
+      it('should convert 60,-60 (right and down a bit) in world space to 160,210 (center) in raster space c28271', () => {
         compare([60, -60], [160, 210]);
       });
     });
@@ -97,7 +97,7 @@ describe('projectionMatrix', () => {
         };
         store.dispatch(action);
       });
-      it('should convert 350,250 in world space to 150,100 (center) in raster space', () => {
+      it('should convert 350,250 in world space to 150,100 (center) in raster space c28272', () => {
         compare([350, 250], [150, 100]);
       });
       describe('when the user has scaled to 2', () => {
@@ -111,10 +111,10 @@ describe('projectionMatrix', () => {
         // maxX = 350 + (150/2) = 425
         // minY = 250 - (100/2) = 200
         // maxY = 250 + (100/2) = 300
-        it('should convert 350,250 in world space to 150,100 (center) in raster space', () => {
+        it('should convert 350,250 in world space to 150,100 (center) in raster space c28273', () => {
           compare([350, 250], [150, 100]);
         });
-        it('should convert 275,300 in world space to 0,0 (top left) in raster space', () => {
+        it('should convert 275,300 in world space to 0,0 (top left) in raster space c28274', () => {
           compare([275, 300], [0, 0]);
         });
       });
